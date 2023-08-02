@@ -1,58 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cost-Benefit Analysis</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cost-Benefit Analysis</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
 
-<body>
-  <div class="container">
-    <h2>Cost-Benefit Analysis</h2>
-    <form id="costBenefitForm">
-      <div class="input-group">
-        <label for="vehicle-type">Vehicle Type:</label>
-        <label>
-          <input type="radio" name="vehicle-type" value="two-wheeler">Two-Wheeler
-        </label>
-        <label>
-          <input type="radio" name="vehicle-type" value="four-wheeler">Four-Wheeler
-        </label>
+  <body>
+    <div class="container">
+      <h2>Cost-Benefit Analysis</h2>
+      <form id="costBenefitForm">
+        <div class="input-group">
+          <label for="vehicle-type">Vehicle Type:</label>
+          <label>
+            <input type="radio" name="vehicle-type" value="two-wheeler">Two-Wheeler
+          </label>
+          <label>
+            <input type="radio" name="vehicle-type" value="four-wheeler">Four-Wheeler
+          </label>
+        </div>
+        <div class="input-group">
+          <label for="vehicle-price">Vehicle Price - ICE:</label>
+          <input type="number" id="vehicle-price_ICE" name="vehicle-price_ICE" value= 100000 required>
+        </div>
+        <div class="input-group">
+          <label for="vehicle-price">Vehicle Price - EV:</label>
+          <input type="number" id="vehicle-price_EV" name="vehicle-price_EV" value= 150000 required>
+        </div>
+        <div class="input-group">
+          <label for="mileage-year">Mileage/Year:</label>
+          <input type="number" id="mileage-year" name="mileage-year" value= 10000 required>
+        </div>
+        <div class="input-group">
+          <label for="fuel-cost">Fuel Cost (ICE) [Per Litre]:</label>
+          <input type="number" id="fuel-cost_ICE" name="fuel-cost_ICE" value=105.00 required>
+        </div>
+        <div class="input-group">
+          <label for="electricity-cost">Electricity Cost [Per Unit]:</label>
+          <input type="number" id="electricity-cost" name="electricity-cost" value=8.0 required>
+           </div>
+           <div class="input-group">
+          <label for="maintenance-charges">ICE - Mileage [Km/Litre]:</label>
+          <input type="number" id="ICE_mileage" name="ICE_mileage" value= 55 required>
+        </div>
+         <div class="input-group">
+          <label for="maintenance-charges">EV Range (Km/Full Charge):</label>
+          <input type="number" id="EV_range" name="EV_range" value= 90 required>
+        </div>
+        <div class="input-group">
+          <label for="maintenance-charges">Battery Capacity of EV [kWh]:</label>
+          <input type="number" id="EV_capacity" name="EV_capacity" value= 3 required>
+        </div>
+        <button type="submit">Calculate</button>
+      </form>
+      <div id="result" style="display: none;">
+        <h3>Analysis Results</h3>
+        <p id="fuel_ICEd"></p>
+        <p id="fuel_EVd"></p> 
+        <p id="BEYd"></p>
       </div>
-      <div class="input-group">
-        <label for="vehicle-price">Vehicle Price - ICE:</label>
-        <input type="number" id="vehicle-price" name="vehicle-price" required>
-      </div>
-      <div class="input-group">
-        <label for="vehicle-price">Vehicle Price - EV:</label>
-        <input type="number" id="vehicle-price" name="vehicle-price" required>
-      </div>
-      <div class="input-group">
-        <label for="mileage-year">Mileage/Year:</label>
-        <input type="number" id="mileage-year" name="mileage-year" required>
-      </div>
-      <div class="input-group">
-        <label for="fuel-cost">Fuel Cost:</label>
-        <input type="number" id="fuel-cost" name="fuel-cost" required>
-      </div>
-      <div class="input-group">
-        <label for="electricity-cost">Electricity Cost:</label>
-        <input type="number" id="electricity-cost" name="electricity-cost" required>
-      </div>
-      <div class="input-group">
-        <label for="maintenance-charges">Maintenance Charges:</label>
-        <input type="number" id="maintenance-charges" name="maintenance-charges" required>
-      </div>
-      <button type="submit">Calculate</button>
-    </form>
-    <div id="result" style="display: none;">
-      <h3>Cost-Benefit Analysis Results</h3>
-      <p id="totalCost"></p>
-      <p id="totalBenefit"></p>
     </div>
-  </div>
-</body>
+  </body>
 
 </html>
