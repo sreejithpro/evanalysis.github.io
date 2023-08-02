@@ -16,6 +16,7 @@ body {
 
 h2 {
   text-align: center;
+  margin-top: 1px;
   margin-bottom: 20px;
   color: #1C7214; /* Dark green */
 }
@@ -23,6 +24,7 @@ h2 {
 form {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 .input-group {
@@ -65,13 +67,15 @@ button:hover {
 
 /* Radio buttons 3D effect */
 input[type="radio"] {
-  -webkit-appearance: none; /* Remove default styles */
+  -webkit-appearance: none;
+  /* Remove default styles */
   -moz-appearance: none;
   appearance: none;
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  border: 2px solid #6279B8; /* Medium blue */
+  border: 2px solid #6279B8;
+  /* Medium blue */
   position: relative;
   margin-right: 10px;
   cursor: pointer;
@@ -86,5 +90,6 @@ input[type="radio"]:checked::before {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background-color: #6279B8; /* Medium blue */
+  background-color: #6279B8;
+  /* Medium blue */
 }
