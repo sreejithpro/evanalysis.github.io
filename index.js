@@ -1,4 +1,4 @@
-document.getElementById("costBenefitForm").addEventListener("submit", function(event) {
+body.getElementById("costBenefitForm").addEventListener("submit", function(event) {
   event.preventDefault(); // Prevent form submission (page refresh)
 
   // Get form values
