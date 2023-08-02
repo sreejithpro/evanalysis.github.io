@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cost-Benefit Analysis</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <h2>Cost-Benefit Analysis</h2>
+    <form id="costBenefitForm">
+      <div class="input-group">
+        <label for="vehicle-type">Vehicle Type:</label>
+        <label>
+          <input type="radio" name="vehicle-type" value="two-wheeler">Two-Wheeler
+        </label>
+        <label>
+          <input type="radio" name="vehicle-type" value="four-wheeler">Four-Wheeler
+        </label>
+      </div>
+      <div class="input-group">
+        <label for="vehicle-price">Vehicle Price - ICE:</label>
+        <input type="number" id="vehicle-price" name="vehicle-price" required>
+      </div>
+      <div class="input-group">
+        <label for="vehicle-price">Vehicle Price - EV:</label>
+        <input type="number" id="vehicle-price" name="vehicle-price" required>
+      </div>
+      <div class="input-group">
+        <label for="mileage-year">Mileage/Year:</label>
+        <input type="number" id="mileage-year" name="mileage-year" required>
+      </div>
+      <div class="input-group">
+        <label for="fuel-cost">Fuel Cost:</label>
+        <input type="number" id="fuel-cost" name="fuel-cost" required>
+      </div>
+      <div class="input-group">
+        <label for="electricity-cost">Electricity Cost:</label>
+        <input type="number" id="electricity-cost" name="electricity-cost" required>
+      </div>
+      <div class="input-group">
+        <label for="maintenance-charges">Maintenance Charges:</label>
+        <input type="number" id="maintenance-charges" name="maintenance-charges" required>
+      </div>
+      <button type="submit">Calculate</button>
+    </form>
+    <div id="result" style="display: none;">
+      <h3>Cost-Benefit Analysis Results</h3>
+      <p id="totalCost"></p>
+      <p id="totalBenefit"></p>
+    </div>
+  </div>
+</body>
+
+</html>
