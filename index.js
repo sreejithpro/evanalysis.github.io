@@ -2,7 +2,6 @@ document.getElementById("costBenefitForm").addEventListener("submit", function(e
   event.preventDefault(); // Prevent form submission (page refresh)
 
   // Get form values
-  const vehicleType = document.querySelector('input[name="vehicle-type"]:checked').value;
   const vehicle_price_ICE = parseFloat(document.getElementById("vehicle-price_ICE").value);
   const vehicle_price_EV = parseFloat(document.getElementById("vehicle-price_EV").value);
   const mileageYear = parseFloat(document.getElementById("mileage-year").value);
@@ -23,7 +22,7 @@ document.getElementById("costBenefitForm").addEventListener("submit", function(e
   resultContainer.style.display = "block";
 
   const fuel_ICEr = document.getElementById("fuel_ICEd");
-  fuel_ICEr.textContent = `Cost of Fuel ICE is: ${fuel_ICE.toFixed(2)}`;
+  fuel_ICEr.textContent = `Cost of Fuel for ICE: ${fuel_ICE.toFixed(2)}`;
 
   const fuel_EVr = document.getElementById("fuel_EVd");
   fuel_EVr.textContent = `Cost of Electricity: ${fuel_EV.toFixed(2)}`;
